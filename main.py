@@ -39,13 +39,16 @@ def lookThroughDirectory():
 
 
 def sort(name, file):
-    if os.path.exists(name):
-        shutil.move(file, name)
-    elif not os.path.exists(name):
-        os.mkdir(name)
-        shutil.move(file, name)
-    else:
-        print("Unmet condition")
+    try:
+        if os.path.exists(name):
+            shutil.move(file, name)
+        elif not os.path.exists(name):
+            os.mkdir(name)
+            shutil.move(file, name)
+        else:
+            print("Unmet condition")
+    except:
+        pass
 
 
 if __name__ == "__main__":
