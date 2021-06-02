@@ -52,6 +52,6 @@ def sort(name, file):
 
 
 if __name__ == "__main__":
-    os.chdir(r"C:\Users\danie\Downloads")
+    os.chdir(r"C:\Users\name\Downloads")
     lookThroughDirectory()
     print("Completed")
